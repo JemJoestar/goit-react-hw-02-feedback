@@ -2,7 +2,6 @@ import { Component } from 'react';
 import { RatingButtonList } from './RatingButtonList';
 import { Statistics } from './Statistics';
 
-import css from './Feedback.module.css';
 import { Notification } from './Notification';
 import { Section } from './Section';
 
@@ -44,7 +43,7 @@ export class Feedback extends Component {
           />
         </Section>
         <Section title={'Statistics'}>
-          {this.findTotalRating() != 0 ? (
+          {this.findTotalRating() !== 0 ? (
             <Statistics
               good={this.state.good}
               neutral={this.state.neutral}
